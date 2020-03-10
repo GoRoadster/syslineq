@@ -1,14 +1,5 @@
 from numpy import array, zeros, fabs, linalg
 
-a = array([[0, 7, -1, 3, 1],
-           [0, 3, 4, 1, 7],
-           [6, 2, 0, 2, -1],
-           [2, 1, 2, 0, 2],
-           [3, 4, 1, -2, 1]],
-          float)
-b = array([5, 7, 2, 3, 4], float)
-
-
 def solve(a, b):
     n = len(b)
     x = zeros(n, float)
@@ -52,5 +43,3 @@ def compare_with_numpy(a, b):
     print(solution)
 
 
-
-compare_with_numpy(a, b)
