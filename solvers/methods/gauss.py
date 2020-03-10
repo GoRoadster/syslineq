@@ -1,6 +1,6 @@
 from numpy import array, zeros, fabs, linalg
 
-def solve(a, b):
+def gaussian_elimination(a, b):
     n = len(b)
     x = zeros(n, float)
     eps = 0.5e-15
