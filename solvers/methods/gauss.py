@@ -1,8 +1,11 @@
 from numpy import array, zeros, fabs, linalg
+from copy import deepcopy
 
-def gaussian_elimination(a, b):
-    n = len(b)
+def gaussian_elimination(matrix, coeff):
+	a = deepcopy(matrix)
+	b = deepcopy(coeff)
     x = zeros(n, float)
+	n = len(b)
     eps = 0.5e-15
 
     # Elimination
@@ -32,14 +35,5 @@ def gaussian_elimination(a, b):
         x[i] = (b[i] - sum) / a[i, i]
 
     return x
-
-
-def compare_with_numpy(a, b):
-    numpy_sol = linalg.solve(a, b)
-    solution = solve(a, b)
-    print("numpy solutin:")
-    print(numpy_sol)
-    print("solver solution:")
-    print(solution)
 
 
